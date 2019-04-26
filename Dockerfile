@@ -18,6 +18,7 @@ RUN set -x \
   && pip3 install -U https://github.com/dmux/polemarch/archive/master.zip \
   && pip3 install mysqlclient boto3 azure awscli \
   && curl https://cli-assets.heroku.com/install.sh | sh \
+  && curl -sL https://github.com/digitalocean/doctl/releases/download/v<version>/doctl-<version>-linux-amd64.tar.gz | tar -xzv \
   && mkdir -p /var/run/polemarch /data \
   && chmod +x /start.sh
 
